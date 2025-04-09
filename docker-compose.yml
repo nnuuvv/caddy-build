@@ -1,6 +1,7 @@
 services:
   caddy:
     build: .
+    container_name: caddy
     restart: unless-stopped
     ports: 
       - "80:80"
@@ -20,4 +21,5 @@ volumes:
 
 networks:
   caddy:
+    name: proxy
     driver: bridge
